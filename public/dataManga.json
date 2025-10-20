@@ -1,0 +1,14 @@
+{
+  "01": {
+    "judul": "isekai1",
+    "image": "res/images/1.jpg"
+  },
+  "02": {
+    "judul": "isekai2",
+    "image": "res/images/7.jpg"
+  },
+  "03": {
+    "judul": "isekai3",
+    "image": "res/images/3.jpg"
+  }
+}
