@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MangaWeb — History Tontonan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>MangaWeb</h1>
+    <div class="controls">
+      <button id="btnViewHistory">Lihat History</button>
+      <button id="btnClearLocal">Hapus History (Local)</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="mangaList">
+      <h2>Daftar Manga</h2>
+      <div id="list"></div>
+    </section>
+
+    <aside id="historyPanel" class="hidden">
+      <h2>History Tonton</h2>
+      <ul id="historyList"></ul>
+      <div class="history-actions">
+        <button id="btnClearHistory">Hapus Semua History</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
