@@ -1,8 +1,12 @@
 // === KONFIGURASI FIREBASE ===
 const firebaseConfig = {
-  apiKey: "API_KEY_KAMU",
-  authDomain: "PROJECT_ID.firebaseapp.com",
-  projectId: "PROJECT_ID",
+  apiKey: "AIzaSyD20Efj4YUjq5yqsP1oLRo8apdYmJxDwJ0",
+  authDomain: "mangawebapp-43750.firebaseapp.com",
+  projectId: "mangawebapp-43750",
+  storageBucket: "mangawebapp-43750.firebasestorage.app",
+  messagingSenderId: "883744625809",
+  appId: "1:883744625809:web:647003fe305e780b185b30",
+  measurementId: "G-RNJSSC22QQ"
 };
 firebase.initializeApp(firebaseConfig);
 
