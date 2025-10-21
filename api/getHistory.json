@@ -1,0 +1,13 @@
+// api/getHistory.js
+import fs from "fs";
+import path from "path";
+
+export default async function handler(req, res) {
+  const filePath = path.join(process.cwd(), "public/dataHistory.json");
+  const { uid } = req.query;
+
+  if (!fs.existsSync(filePath)) return res.json([]);
+
+  const data = JSON.parse(fs.readFileSync(filePath));
+  res.json(data[uid] || []);
+}

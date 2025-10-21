@@ -1,0 +1,20 @@
+// api/deleteHistory.js
+import fs from "fs";
+import path from "path";
+
+export default async function handler(req, res) {
+  if (req.method !== "POST") return res.status(405).end();
+
+  const filePath = path.join(process.cwd(), "public/dataHistory.json");
+  const { uid, title } = req.body;
+
+  if (!fs.existsSync(filePath)) return res.status(200).json({});
+
+  const data = JSON.parse(fs.readFileSync(filePath));
+  if (data[uid]) {
+    data[uid] = data[uid].filter(item => item.title !== title);
+  }
+
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  res.status(200).json({ success: true });
+}
